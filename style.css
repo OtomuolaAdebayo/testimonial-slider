@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/pattern-bg.svg), url(images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: top, left -45%;
+    background-size: 350px, 100px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 25px;
+
+}
+
+.img {
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin-top: 20px;
+}
+
+.switch-btn {
+    width: 80px;
+    height: 40px;
+    position: relative;
+    top: -2em;
+    right: 0em;
+    border-radius: 20px;
+    border: none;
+}
+
+.person-profile-tanya, .person-profile-john {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.par {
+  padding-top: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 1.3rem;
+  opacity: 60%;
+}
+
+.person-name-tanya {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.career-tanya {
+  opacity: 45%;
+  text-align: center;
+}
+
+.person-name-john {
+  text-align: center;
+  padding-top: 20px;
+  position: relative;
+  bottom: 20px;
+  padding-right: 5px;
+}
+
+.career-john {
+  opacity: 45%;
+  text-align: center;
+}
+
+.main-container-john {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  body {
+    background-image: url(images/pattern-bg.svg), url(images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: top right 7%, left -45%;
+    background-size: 40%, 100px;
+}
+
+  .person-profile-tanya, .person-name-john{
+    display: flex;
+    flex-direction: row;
+  }
+  .switch-btn {
+    width: 300px;
+    height: 40px;
+    position: relative;
+    top: 15em;
+    right: -40em;
+    border-radius: 20px;
+    border: none;
+}
+.img {
+  position: relative;
+  right: -65%;
+    width: 400px;
+    height: 400px;
+}
+.par {
+    margin-right: 25%;
+    font-size: 1.0rem;
+}
+.name_career {
+    display: flex;
+    flex-direction: row;
+    margin-left: 40%;
+    position: relative;
+    top: -26px;
+}
+.career-tanya {
+  padding-bottom: 55px;
+  margin-left: 5px;
+}
+.person-name-tanya {
+  position: relative;
+  top: -23px;
+} 
+}
