@@ -1,20 +1,22 @@
-const arrowLeft = document.querySelector(".fa-angle-left");
-// const arrowRight = document.querySelector(".fa-angle-right");
+let slideIndex = 1;
+showSlides(slideIndex);
 
-const btnFncArLeft = function() {
-    const tanya = document.querySelector(".main-container-tanya")
-    if (tanya.style.display === "block") {
-    tanya.style.display = "none";
-    }
-    // } else {
-    //     arrowLeft.style.display = "none";
-    // }
-    // tanya.style.display = "none"
+function btnSlides(n) {
+    showSlides(slideIndex += n);
 }
-arrowLeft.addEventListener('click', btnFncArLeft);
 
-// const btnFncArRight = function() {
-//     const john = document.querySelector(".person-profile");
-//     john.style.display = "block"
-// }
-// arrowRight.addEventListener('click', btnFncArRight)
+const btnPrev = document.querySelector(".previous");
+
+const showSlides = function(content) {
+    let i;
+    const slides = document.querySelector(".slide")
+    if (content > slides.length) {slideIndex = 1}
+    if (content < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+
+}
+
+btnPrev.addEventListener('click', showSlides)
